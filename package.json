@@ -1,0 +1,31 @@
+{
+  "name": "rss-feed-news-api",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "clean": "rd /s /q dist .cache>nul 2>&1|echo.>nul",
+    "deepClean": "del package-lock.json && rd /s /q dist node_modules .cache>nul 2>&1|echo.>nul",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "fast-xml-parser": "^4.0.9",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.7.8",
+    "@types/xml2js": "^0.4.11",
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19",
+    "typescript": "^4.7.4"
+  }
+}
